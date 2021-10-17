@@ -18,8 +18,6 @@ public class Cat {
         return isfull;//чтение статуса сытости
     }
 
-    public void eat() {}
-
     public String getName() {
         return name;
     }
@@ -35,8 +33,11 @@ public class Cat {
     public void setAppetite(int appetite) {
         this.appetite = appetite;
     }
-    public void eat(Plate pplate1) {
-        pplate1.decreaseFood(appetite);
+    public void eat(Plate plate1) {
+        if (appetite <= plate1.getFood()) {
+            setIsfull(true);
+        } else {setIsfull(false);}
+        plate1.decreaseFood(appetite);
     }
 
 }

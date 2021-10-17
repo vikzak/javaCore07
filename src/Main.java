@@ -25,12 +25,10 @@ public class Main {
         for (int i = 0; i < cat.length; i++){
             System.out.printf(cat[i].getName());
             cat[i].eat(plate1); // кормим кота
-            // проверяем аппетит кота и содержимое тарелки для вывода статуса
-            if (plate1.getFood() >= cat[i].getAppetite()) cat[i].setIsfull(true);
-            else cat[i].setIsfull(false);
             System.out.printf("аппетит кота: %s\n",cat[i].getIsfull());
             // выводим информацию об остатках в тарелке;
             plate1.info();
+            System.out.printf("----------------\n");
         }
     }
 }
