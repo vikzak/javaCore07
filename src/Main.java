@@ -12,13 +12,13 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Cat [] cat = new Cat[5]; // создаем массив котиков
+        Cat [] cat = new Cat[5]; // создаем массив котиков (имя/размер аппетита/статус сытости: голоден)
         cat[0] = new Cat("Вася",15,false);
         cat[1] = new Cat("Гоша",19,false);
         cat[2] = new Cat("Чарли",22,false);
         cat[3] = new Cat("Муфик",14,false);
         cat[4] = new Cat("Зевс",15,false);
-        // в тарелке 50 едениц корма
+        // в общей тарелке 50 едениц корма
         Plate plate1 = new Plate(50);
         plate1.info(); // информация о еде в тарелке
         // начинаем кормить котов

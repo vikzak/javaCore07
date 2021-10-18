@@ -34,7 +34,7 @@ public class Cat {
         this.appetite = appetite;
     }
     public void eat(Plate plate1) {
-        if (appetite <= plate1.getFood()) {
+        if (appetite <= plate1.getFood()) {//  проверка остатков корма в тарелке и аппетита кота
             setIsfull(true);
         } else {setIsfull(false);}
         plate1.decreaseFood(appetite);
